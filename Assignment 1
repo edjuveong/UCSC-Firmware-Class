@@ -1,15 +1,39 @@
 
-Function in C lanaguage
-/* Decode from Decimal to BCD */
+Homework #1
+
+1.) Function in C lanaguage
+
+/*Part 1 of Homework 1*/
+#include <stdio.h>
+
+/*Function to get the product of two integers*/
+int multiply (int a, int b)
+{
+  int r;
+  r=a*b;
+  return r;
+}
+
+/* Main calling the function multiply */
+int main ()
+{
+  int z;
+  z = multiply (5,3);
+  printf( "The product is %i",z);
+return 0;
+}
 
 
 
+2.) Hardware discovery project: Parallax USB two channel Oscilloscope (2006 model)
 
-
-
-
-Hardware discovery project: Parallax USB Oscilloscope
-
-Microcontroller: Parallax SX48DB
-                  8 bit RISC microcontroller 
+Microcontroller:  Parallax SX48DB
+                  8 bit RISC microcontroller
+                  Harvard architecture
                   Clock Frequency up to 75Mhz
+                  262 Bytes SRAM
+                  4K words EEPROM (Flash) 
+                  Operating voltage: 3.0VDC to 5.5VDC 
+                    
+The SX48DB mincroncontroler uses its I/O pins to communicate with the IC: FT32RL for the USB interface
+The microcontroller also uses its I/O pins to read analog data from the ADC LTC2286
