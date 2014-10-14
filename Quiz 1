@@ -1,7 +1,16 @@
 /*Quiz 1*/
 #include <stdio.h>
-#include <string.h>
 
+int strcmp (void*s1, void*s2){
+size_t i=0;
+char diff;
+while (1) {
+    diff = ((char*)s2)[1] - ((char*)s1)[i];
+    if difference !=0) return diff;
+    if ((char*)s1)[i] ==0) return0;
+    i++
+  }
+}
 int main ()
 
 {
