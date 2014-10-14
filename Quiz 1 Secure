@@ -5,3 +5,27 @@ Very similar to fast except that you want to continue comparing two strings unti
 This will hide the size of the password and come up always with the same time for string comparison that will be
 independent of the string size
 
+#include <stdio.h>
+
+int strcmp (void*s1, void*s2){
+size_t i=0;
+char diff;
+while (1) {
+    diff = ((char*)s2)[1] - ((char*)s1)[i];
+    if (diff !=0) return diff;
+    if ((char*)s1)[i] ==0) return0;
+    i++
+  }
+}
+int main ()
+
+{
+  char s0[5] = "STAT";
+  char s1[5] = "STAR";
+  int d;
+  d= strcmp (s0,s1);
+  printf("string difference= %i",d);
+  return 0;
+}
+
+
