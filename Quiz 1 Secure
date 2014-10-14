@@ -5,6 +5,9 @@ Very similar to fast except that you want to continue comparing two strings unti
 This will hide the size of the password and come up always with the same time for string comparison that will be
 independent of the string size
 
+Even if there is difference just continue with the string comparison to always have the same run time
+
+
 #include <stdio.h>
 
 int strcmp (void*s1, void*s2){
