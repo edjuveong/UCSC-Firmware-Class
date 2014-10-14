@@ -1,0 +1,14 @@
+/*strcmp example */
+#include <stdio.h>
+#include <string.h>
+
+int main ()
+
+{
+  char s0[5] = "STAT";
+  char s1[5] = "STAR";
+  int d;
+  d= strcmp (s0,s1);
+  printf("string difference= %i",d);
+  return 0;
+}
