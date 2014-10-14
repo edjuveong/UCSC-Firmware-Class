@@ -1,0 +1,7 @@
+/*Secure*/
+
+Very similar to fast except that you want to continue comparing two strings until the max. string size is reached
+
+This will hide the size of the password and come up always with the same time for string comparison that will be
+independent of the string size
+
