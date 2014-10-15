@@ -17,12 +17,11 @@ Total Hours Spent: 5.0/1.5
    How many files are different between (a) and (b)? (Use linux commands: find, wc, diff) (10 points)
    
    
-   What is the "Entry point address:" of your program?  (hint: using readelf)
+   What is the "Entry point address:" of your program?  (hint: using readelf) 
    
-   uVision-
-   GCC ARM Embedded-
+   uVision- program counter at 0000
+   GCC ARM Embedded- program counter at 0000
    
-
 
 2. binwalk, objdump, nm to Analysis binaries files
    http://binwalk.org/
