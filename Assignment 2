@@ -1,1 +1,33 @@
+Total Hours Spent: 5.0/1.5
+		   Actual/Expect
+
+4357 Embedded Firmware Essentials
+- Program Assignment #2
+
+1. Login to mbed web site, export the "Hello World" program to all of the following targets. 
+   How many text files and how many lines of text code in the exported offline code package? 
+   
+   uVision - There were two text files: HelloWorld.uvopt and HelloWorld.uvproj
+   GCC ARM Embedded - There was only one text file: Makefile  
+   
+   How many binary (library or object) files?
+   uVision-
+   GCC ARM Embedded
+   
+   How many files are different between (a) and (b)? (Use linux commands: find, wc, diff) (10 points)
+   
+   
+   What is the "Entry point address:" of your program?  (hint: using readelf)
+   
+   uVision-
+   GCC ARM Embedded-
+   
+
+
+2. binwalk, objdump, nm to Analysis binaries files
+   http://binwalk.org/
+
+
+
+3. Optional: git clone https://github.com/mbedmicro/mbed
 
