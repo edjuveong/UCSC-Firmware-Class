@@ -7,7 +7,7 @@ Total Hours Spent: 5.0/1.5
 1. Login to mbed web site, export the "Hello World" program to all of the following targets. 
    How many text files and how many lines of text code in the exported offline code package? 
    
-   uVision - There were two text files: HelloWorld.uvopt and HelloWorld.uvproj (project file)
+   uVision - There were three text files: HelloWorld.uvopt, HelloWorld.uvproj (project file)., and LPC1768 script file
    GCC ARM Embedded - There was only one text file: Makefile  
    
    How many binary (library or object) files?
