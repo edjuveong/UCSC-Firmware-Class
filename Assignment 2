@@ -94,15 +94,7 @@ DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
    
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   How many binary (library or object) files?
+      How many binary (library or object) files?
    uVision-
    GCC ARM Embedded
    
@@ -111,10 +103,18 @@ DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
    
    What is the "Entry point address:" of your program?  (hint: using readelf) 
    
-   uVision- program counter at 0000
-   GCC ARM Embedded- program counter at 0000
-   
+uVision entry point address: 
+NUM:    Value               Size        Type     
+1       00000000             0           File    
 
+GCC ARM entry point address: 
+NUM:    Value                Size        Type      
+1       00000000             0            File        
+   
+   
+   uVision- program counter starts at 0000
+   GCC ARM Embedded- program counter starts at 0000
+   
 2. binwalk, objdump, nm to Analysis binaries files
    http://binwalk.org/
 
