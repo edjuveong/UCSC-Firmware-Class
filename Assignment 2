@@ -95,8 +95,9 @@ DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
    
    
       How many binary (library or object) files?
-   uVision-
-   GCC ARM Embedded
+   uVision-Library path is embed/LPC1768/ARM there were 5 object files (*.0)
+   
+   GCC ARM Embedded- Library path is embed/LPC1768/GCC_ARM there were 4 object files (*.o)  
    
    How many files are different between (a) and (b)? (Use linux commands: find, wc, diff) (10 points)
    
