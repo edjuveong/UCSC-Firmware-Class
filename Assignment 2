@@ -101,6 +101,14 @@ DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
    
    How many files are different between (a) and (b)? (Use linux commands: find, wc, diff) (10 points)
    
+   The uVision has more files as compared to GCC ARM. At the main directory, it has HelloWorld.uvopt and
+             HelloWorld.uvproj for the instruction build while GCC ARM only has the Makefile
+             
+   For the library path: uVision has one additional object file called sys.o that was not in GCC ARM
+   
+   Also, in the library path for uVision it has differnt files called: capi.ar, LPC1768 (windos script), and mbed.ar 
+   
+   For the librry path of GCC ARM it has the different files called: libcapi.a and libmbed.a
    
    What is the "Entry point address:" of your program?  (hint: using readelf) 
    
