@@ -127,7 +127,10 @@ NUM:    Value                Size        Type
 2. binwalk, objdump, nm to Analysis binaries files
    http://binwalk.org/
 
-
-
+ Binwalk is a firmware analysis tool that looks at the header signature.
+ It runs in Linux and written in Python.
+ 
+ THe bin file analys of MBED hello world was made using that tool. 
+ 
 3. Optional: git clone https://github.com/mbedmicro/mbed
 
