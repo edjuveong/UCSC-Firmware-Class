@@ -377,10 +377,28 @@ Terminal command: nm –a startup_LPC17xx.o
  However, I did find other firmware image analysis tool that I tried called HxDHex editor.
  It allowed me to open the .bin file and convert to hex for analysis.
  
- I upload the pdf file of the hex file generated per below google drive link.
+ I upload the pdf file of the hex file generated per below google drive link. The file name is HelloworldHex.pdf
  https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
  
  THe bin file analys of MBED hello world was made using that tool. 
  
 3. Optional: git clone https://github.com/mbedmicro/mbed
 
+ I did try to read another bin file by compiling a modified version of HekllowWorld and I cal this file Try01
+ Here is the program listing:
+ 
+#include "mbed.h"
+
+DigitalOut myled(LED2);
+
+int main() {
+    while(1) {
+        myled = 1;
+        wait(4.0);
+        myled = 0;
+        wait(4.0);
+    }
+}
+
+I then uploaded the pdf file of the hex file generated per below google drive link. The file nane is Try01Hex.pdf 
+ https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
