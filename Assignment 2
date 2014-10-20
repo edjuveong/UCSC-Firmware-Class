@@ -94,15 +94,15 @@ DEPS = $(OBJECTS:.o=.d) $(SYS_OBJECTS:.o=.d)
    
    
    
-      How many binary (library or object) files?
-   uVision-Library path is embed/LPC1768/ARM there were 5 object files (*.0)
+   How many binary (library or object) files?
    
-   GCC ARM Embedded- Library path is embed/LPC1768/GCC_ARM there were 4 object files (*.o)  
+   uVision-Library path is embed/LPC1768/ARM there were 5 object files (*.0)
+      GCC ARM Embedded- Library path is embed/LPC1768/GCC_ARM there were 4 object files (*.o)  
    
    How many files are different between (a) and (b)? (Use linux commands: find, wc, diff) (10 points)
    
    The uVision has more files as compared to GCC ARM. At the main directory, it has HelloWorld.uvopt and
-             HelloWorld.uvproj for the instruction build while GCC ARM only has the Makefile
+   HelloWorld.uvproj for the instruction build while GCC ARM only has the Makefile
              
    For the library path: uVision has one additional object file called sys.o that was not in GCC ARM
    
