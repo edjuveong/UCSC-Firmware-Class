@@ -367,13 +367,18 @@ Terminal command: nm –a startup_LPC17xx.o
 00000000 R __Vectors
 0000001b W WDT_IRQHandler
 
+ I did online compilation of HelloWorld to geberate the HellowWorld.bin file and tried to use some of the tools for analysis.
 
  Binwalk is a firmware analysis tool that looks at the header signature.
  It runs in Linux and written in Python.
 
  I uploaded the binwalk software and other supporting files but was not succesful in making this to work.
  
- However, I did find other firmware imae analysis tool that I tried.  
+ However, I did find other firmware image analysis tool that I tried called HxDHex editor.
+ It allowed me to open the .bin file and convert to hex for analysis.
+ 
+ I upload the pdf file of the hex file generated per below google drive link.
+ https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
  
  THe bin file analys of MBED hello world was made using that tool. 
  
