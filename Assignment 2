@@ -367,7 +367,7 @@ Terminal command: nm –a startup_LPC17xx.o
 00000000 R __Vectors
 0000001b W WDT_IRQHandler
 
- I did online compilation of HelloWorld to geberate the HellowWorld.bin file and tried to use some of the tools for analysis.
+ I did online compilation of HelloWorld to generate the HelloWorld.bin file and tried to use some of the tools for analysis.
 
  Binwalk is a firmware analysis tool that looks at the header signature.
  It runs in Linux and written in Python.
@@ -384,8 +384,8 @@ Terminal command: nm –a startup_LPC17xx.o
  
 3. Optional: git clone https://github.com/mbedmicro/mbed
 
- I did try to read another bin file by compiling a modified version of HekllowWorld and I cal this file Try01
- Here is the program listing:
+ I did try to read another bin file by compiling a modified version of HekllowWorld and I called this file Try01
+ Here is the program listing of Try01:
  
 #include "mbed.h"
 
