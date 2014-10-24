@@ -1,0 +1,25 @@
+4357 Embedded Firmware Essentials
+Program Assignment #3 10 points
+Read Chapter 1,2,3, and Chapter 14
+
+I completed reading all the assigned chapters of our text book on Embedded systems, MBED, Digital Input & Output, 
+and the MBED libraries.
+
+Program Example 14.1 Manipulating control registers to flash an LED
+
+I then tried the program of Example 14.1 by downloading this from this site:  http://embeddedacademic.com/
+I then used both the online compiler and the uVision compiler to generate the program files and store this into the MBED board.
+I attached LED at pin no. ___ together with a series 100ohms resitor to ground.
+
+The pogram executes by turning on and off a single LED at a constant specified rate.
+
+The program is able to configure the PINSEL nd FIODIR registers for the I/O pins. The pin ___ was configured as an output and
+was set and reset by the program with a certain delay interval. The delay is a program function to loop for 1M times to generate
+the time interval between the blinking of the LED.
+
+Pls. check my Google drive per below link for the pictures of the program running on my MBED baord
+https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
+
+Program Example 14.1 Manipulating control registers to flash an LEDProgram Example 14.3 Combined digital input and output.
+Compile and download Program Example 14.1 and 14.3 into your mbed board.
+
