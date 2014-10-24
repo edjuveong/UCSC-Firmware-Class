@@ -3,7 +3,7 @@ Program Assignment #3 10 points
 Read Chapter 1,2,3, and Chapter 14
 
 I completed reading all the assigned chapters of our text book on Embedded systems, MBED, Digital Input & Output, 
-and the MBED libraries.
+and the MBED libraries + control registers.
 
 Program Example 14.1 Manipulating control registers to flash an LED
 
