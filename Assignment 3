@@ -9,11 +9,11 @@ Program Example 14.1 Manipulating control registers to flash an LED
 
 I then tried the program of Example 14.1 by downloading this from this site:  http://embeddedacademic.com/
 I then used both the online compiler and the uVision compiler to generate the program files and store this into the MBED board.
-I attached LED at pin no. ___ together with a series 100ohms resitor to ground.
+I attached LED at pin no. 26 together with a series 100ohms resitor to ground.
 
 The pogram executes by turning on and off a single LED at a constant specified rate.
 
-The program is able to configure the PINSEL nd FIODIR registers for the I/O pins. The pin ___ was configured as an output and
+The program is able to configure the PINSEL nd FIODIR registers for the I/O pins. The pin 26 was configured as an output and
 was set and reset by the program with a certain delay interval. The delay is a program function to loop for 1M times to generate
 the time interval between the blinking of the LED.
 
@@ -22,4 +22,8 @@ https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
 
 Program Example 14.1 Manipulating control registers to flash an LEDProgram Example 14.3 Combined digital input and output.
 Compile and download Program Example 14.1 and 14.3 into your mbed board.
+
+Pin 26 LED1
+Pin 25 LED2
+Pin 9  Switch
 
