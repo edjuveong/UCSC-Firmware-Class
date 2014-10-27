@@ -13,7 +13,7 @@ board (either one can be used to load the compiled program file to the MBED boar
 
 The pogram executes by turning on and off a single LED at a constant specified rate.
 
-The program is able to configure the PINSEL and FIODIR registers for the I/O pin P2.0 of LPC1768. The DIP pin 26 was configured
+The program is able to configure the FIOPIN and FIODIR registers for the I/O pin P2.0 (Port 2 bit 0) of LPC1768. The DIP pin 26 was configured
 as an output and was set and reset by the program with a certain delay interval. The "delay" is a program function to loop
 for multiple times to generate the time interval between the blinking of the LED.
 
@@ -25,9 +25,9 @@ Compile and download Program Example 14.1 and 14.3 into your mbed board.
 
 Here are the I/O pins used for this program:
 
-DIP Pin 26 (P2.0 of LPC1768) where the yellow LED is connected  
-DIP Pin 25 (P2.1 of LPC1768) where the green LED is connected 
-DIP Pin 9  (P0.0 of LPC1768) where the push button switch is connected with pull up resistor to Vout(3.3V)
+DIP Pin 26 (P2.0 - Port 2 bit 0 of LPC1768) where the yellow LED is connected  
+DIP Pin 25 (P2.1 - Port 2 bit 1 of LPC1768) where the green LED is connected 
+DIP Pin 9  (P0.0 - Port 0 bit 0 of LPC1768) where the push button switch is connected with pull up resistor to Vout(3.3V)
 
 Depending on the condition of switch (open/close) it applies a logic 1/logic 0 to the DIP pin 9. The program reads this
 input and interchanges the turn on/off rate of each of the LEDs (one LED is turning on/off about twice than the other)  
