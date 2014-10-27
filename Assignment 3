@@ -32,7 +32,7 @@ DIP Pin 9  (P0.0 - Port 0 bit 0 of LPC1768) where the push button switch is conn
 Depending on the condition of switch (open/close) it applies a logic 1/logic 0 to the DIP pin 9. The program reads this
 input and interchanges the turn on/off rate of each of the LEDs (one LED is turning on/off about twice than the other)  
 
-The program is able to configure the PINSEL and FIODIR registers for the I/O pin P2.0, P2.1, and P0.0 of LPC1768. The DIP
+The program is able to configure the FIOPIN and FIODIR registers for the I/O pin P2.0, P2.1, and P0.0 of LPC1768. The DIP
 pin 26 (2.0) and DIP pin 25 (P2.1) were configured as outputs and were set and reset by the program with a certain delay 
 interval. The DIP pin 9 (P0.0) was configured as an input. The program reads the logic level of this DIP pin 9 and
 interchanges the turn on/off of the two LEDS.  The "delay" is a program function to loop
