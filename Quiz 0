@@ -1,0 +1,42 @@
+1. Search: "firmware" at Google 
+
+ 3
+   https://www.google.com/search?sourceid=chrome-psyapi2&ion=1&espv=2&ie=UTF-8&q=firmware 
+
+
+2. Search results are returned within 0.36 seconds. 
+
+What is happening in the background? 
+
+Interrupt happens when keys are pressed to capture the entered data
+
+The data stored in the register are then processed by the CPU for communication as a data packet using TCP IP protocol 
+and using HTTPS
+
+The data packet thn sent as RF packet through the WiFi module (tranceiver)
+It uses some form of data encyption for security 
+
+The packet then sent through the modem then passes through different routers based on the IP address
+
+The packet is then sent thriugh the aopropriate server in the data center that extracts the data and process this
+(search request) then sends back a stream of packet of data as a response
+
+Stream of packet then gets routed and finds its way to the requesting PC client where the display is then updated to show the
+search results
+
+Acronyms learned are:
+
+HTTPS
+TCPIP
+UART
+WiFi
+PCMCIA
+WAP
+CPU
+
+
+
+
+
+
+
