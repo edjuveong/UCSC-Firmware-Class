@@ -1,0 +1,15 @@
+The group members: Emel, Yat, and Edward
+Project: Portable thermal data logger
+
+The group decided to use the TMP102 temperature sensor due to its availablity with corresponding example program.
+We are learning that this sensor uses I2C communication, which is becoming popular for the different sensors.
+
+At the start of defining the hardware platform we learned that we need to add LDO regulator for the USB support
+to convert the 6VDC from 4 X AA battery to 5VDC. 
+
+We are using the 4 X AA battery as the main power source (this is connected to Vin of MBED) and converting to 5VDC for the USB port (using LDO)
+and 3.3V for the thermal sensor (3.3V coming from MBED Vout)
+
+I personally learned that to be able to use the uVision I need to update the firmare of my MBED board.
+
+Good learning so far in the initial stage of the project.
