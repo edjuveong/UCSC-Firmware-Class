@@ -1,0 +1,26 @@
+4357 Embedded Firmware Essentials
+Program Assignment #3 10 points
+
+I completed reading chapter 7 on Serial Communications
+
+I then studies the program to understand what it is trying to do. I learned that it is using the serial communication
+lines Tx (transmit) DIP pin 9 and Rx (receive) DIP pin 10 to send/receive data serially to and from the other mbed board.
+
+It uses the mbed function library: async_port.putc(switch_word) to transmit data and the library function async_port.getc()
+to receive data. 
+
+The program cofigured pins 5 and 6 as input for the two switches and the pins 25 and 26 for output to drive the LEDs 
+
+I then compiled and loaded the program Example 7.9 for the bidirectional data transfer into each of my two mbed LPC1768 boards
+(both have  identical programs). 
+
+I also exchanged notes on this with my classmate Yat Tam for the collaboraive learning.
+
+I then connected the two mbed boards together as per Figure 7.13. 
+
+The program worked perfectly the first try as I can control the LEDs from the mbed board by turning on/off the switches from
+the other mbed board and vice versa.
+
+Pls. check my google drive for pictures of the two mbed boards running this program.
+
+https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA
