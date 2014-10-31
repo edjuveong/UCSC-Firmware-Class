@@ -3,7 +3,7 @@ Program Assignment #3 10 points
 
 I completed reading chapter 7 on Serial Communications
 
-I then studies the program to understand what it is trying to do. I learned that it is using the serial communication
+I then studied the program 7.9 to understand what it is trying to do. I learned that it is using the serial communication
 lines Tx (transmit) DIP pin 9 and Rx (receive) DIP pin 10 to send/receive data serially to and from the other mbed board.
 
 It uses the mbed function library: async_port.putc(switch_word) to transmit data and the library function async_port.getc()
