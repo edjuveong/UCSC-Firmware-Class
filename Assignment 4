@@ -25,10 +25,10 @@ Pls. check my google drive for pictures of the two mbed boards running this prog
 
 https://drive.google.com/#folders/0BysRu65JD_l8cnQxNEpaaGZVWTQ
 
-I also tried installing the Windows driver for the MBED serial console so I can use pc.print and printf functions to display the
+I tried installing the Windows driver for the MBED serial console so I can use pc.print and printf functions to display the
 values of certain variables (using terminal program e.g. Hercules or hYperterminal) to help in the debugging.
 
-I also tried monitoring the Tx and Rx pins using logic analyzer giving me some more information to better understand
+I also also monitored the Tx and Rx pins using logic analyzer giving me some more information to better understand
 asynchronous form of serial communication
 
 
