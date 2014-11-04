@@ -19,5 +19,5 @@ THe bin file opens upp immediately when I am trying to upload this. Apparently, 
 I will need to right click at the selection and save the bin file with if extension to the MBED board. The board did update
 the firmware after power cycling once the bin file was downloaded to the board.
 
-I started to study some existing libraries of funtions that the group can use the read the TMP102 valu thriugh the I2C
+We started to study some existing libraries of funtions that the group can use the read the TMP102 valu thriugh the I2C
 communication and to open a csv file, upload the temperature readings, close the csv file as it gets saved into the USB drive.   
