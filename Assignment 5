@@ -2,15 +2,19 @@
 Program Assignment #4 10 points
 Read Chapter 12---- Completed reading on advance serial communication 
 
+Total hours needed to complete: 2 hours
+
 12.4.3 Ethernet Commuication between mbeds.
 Work with a classmate as a team for this Program Assignment.  
 Connect two mbeds as show in Figure 12.8, 
 and compile and download Program Example 12.7 and 12.8 into each mbed board.  
 
+The board wiring was made and the corresponding transmit and receive programs were flashed into each of the MBED boards.
 
+I used hercules for the TTY terminal to display the received data.
 
 Below is the output received by the receiving MBED board as displayed in the terminal (Showing data B9 and 46 received with 
-padded zeroes:
+padded zeroes):
 
 size = 60 data = B9 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 size = 60 data = B9 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
@@ -26,3 +30,8 @@ size = 60 data = B9 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 size = 60 data = B9 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 size = 60 data = B9 46 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
 
+Also, it shows that there were 60 data bytes received (data sent + padded zeroes).
+
+I also tried using the logic analyzer but the transitions were too fast for it to capture any information. Also, I tried looking
+at the data waveform with the osciloscope. I am able to see smoothened digital data due to the limited 50Mhz bandwidth of the 
+oscilloscope.
