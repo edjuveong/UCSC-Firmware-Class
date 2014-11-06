@@ -35,3 +35,5 @@ Also, it shows that there were 60 data bytes received (data sent + padded zeroes
 I also tried using the logic analyzer but the transitions were too fast for it to capture any information. Also, I tried looking
 at the data waveform with the osciloscope. I am able to see smoothened digital data due to the limited 50Mhz bandwidth of the 
 oscilloscope.
+
+Pls. check supporting pictures in the assignment 5 folder of my Google drive: https://drive.google.com/#folders/0BysRu65JD_l8czdZYVhJcUUtQzA 
