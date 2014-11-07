@@ -61,7 +61,8 @@ BEGIN
  18
 3. Explain the start and stop conditions of i2c? 
 
- 19
+ Start is when the Master pulls down (logic low) the SDA line for certain duration of time while stop  is
+ when the Master pulls up (logic high) the SDA line for certain durarion of time. 
 
  
 
@@ -91,7 +92,7 @@ BEGIN
  26
 4. Is the i2c acknowledge SDA LOW or SDA HIGH? 
 
- 27
+  Acknowledge is SDA low
 
  
 
