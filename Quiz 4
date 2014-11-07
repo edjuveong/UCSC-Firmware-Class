@@ -9,14 +9,13 @@ Q1: Implement the following inline functions:
 
 Q2: How to compute "Interrupt Latency"? 
 
- 
+ Latency is the sum of the time need to save and restore the context prior to the interrupt + time of interrupt service routine
  
 Q3: Serial pc(USBTX, USBRX); // tx, rx  
 
- 
 What API (function) do you use to change the baud rate? 
 
- 
+pc.baud () 
  
 Q4: How many bit(s) does TDO have? Is TDO an input or output type? (Ref: JTAG Pins)  
 
@@ -30,10 +29,7 @@ What is the address of ledArr[0]?
 
 What is the address of ch?  
 
- 
 
-
- 37
 * Enter a hex number [0-9a-fA-F]; Decode it in 4-bit binary format and display them on 4 on board leds.  
 
 
