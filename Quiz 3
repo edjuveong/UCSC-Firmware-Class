@@ -10,8 +10,7 @@ BEGIN
  4
    What is the address of FIOSET? 
 
- 5
-
+  For FIOSET0 to 4 : 0X2009 C018, 0X2009 C038,0X2009 C058,0X2009 C078, 0X2009 C098
  
 
  6
@@ -36,7 +35,7 @@ BEGIN
  11
 2. What is the RS232 Frame? 
 
- 12
+ 12 It follows Aynchronous serial communication: Start bit, 8 bit data, parrity bit, and Stop bit
 
  
 
