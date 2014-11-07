@@ -1,253 +1,145 @@
 BEGIN 
 
- 2
--------------------------------------------------------------------- 
-
- 3
+ 
 Q1: Implement the following inline functions:  
 
- 4
-inline int CircularBufferIsFull(CircularBuffer* que)  
+ inline int CircularBufferIsFull(CircularBuffer* que)  
+ inline int CircularBufferIsEmpty(CircularBuffer* que)  
 
- 5
-inline int CircularBufferIsEmpty(CircularBuffer* que)  
 
- 6
-
- 
-
- 7
-
- 
-
- 8
-
- 
-
- 9
-
- 
-
- 10
--------------------------------------------------------------------- 
-
- 11
 Q2: How to compute "Interrupt Latency"? 
 
- 12
-
  
-
- 13
-
  
-
- 14
-
- 
-
- 15
--------------------------------------------------------------------- 
-
- 16
 Q3: Serial pc(USBTX, USBRX); // tx, rx  
 
- 17
-    What API (function) do you use to change the baud rate? 
-
- 18
+ 
+What API (function) do you use to change the baud rate? 
 
  
-
- 19
-
  
-
- 20
-
- 
-
- 21
-
- 
-
- 22
--------------------------------------------------------------------- 
-
- 23
 Q4: How many bit(s) does TDO have? Is TDO an input or output type? (Ref: JTAG Pins)  
 
- 24
 
- 
 
- 25
-
- 
-
- 26
-
- 
-
- 27
-
- 
-
- 28
-
- 
-
- 29
-
- 
-
- 30
--------------------------------------------------------------------- 
-
- 31
 Q5: 
 
- 32
+
 What is the address of ledArr[0]?  
 
- 33
+
 What is the address of ch?  
 
- 34
-
  
 
- 35
-
- 
-
- 36
-/*  
 
  37
 * Enter a hex number [0-9a-fA-F]; Decode it in 4-bit binary format and display them on 4 on board leds.  
 
- 38
-*/  
 
- 39
-
- 
-
- 40
 #include "mbed.h"  
 
- 41
-
- 
-
- 42
 Serial pc(USBTX, USBRX); // tx, rx  
 
- 43
 DigitalOut ledArr[4] = {DigitalOut(LED1), DigitalOut(LED2), DigitalOut(LED3), DigitalOut(LED4)};  
 
- 44
+
 void DisplayLed(int ch)  
 
- 45
+
 {  
 
- 46
+
 	int i=0; 
 
- 47
 
- 
-
- 48
 	if (ch>='0' && ch<='9') 
 
- 49
+
 		ch-='0'; 
 
- 50
+
 	else if (ch>='A' && ch<='F') { 
 
- 51
+
 		ch-='A'; 
 
- 52
+
 		ch+=10; 
 
- 53
+
 	} else if (ch>='a' && ch<='f') { 
 
- 54
+
 		ch-='a'; 
 
- 55
+
 		ch+=10; 
 
- 56
+
 	} else 
 
- 57
+
 		ch=0; 
 
- 58
+
 
  
 
- 59
+
 	for (i=0; i<4; i++) {  
 
- 60
+
 		if(ch& (1<<i)) 
 
- 61
+
 			ledArr[i] = 1;  
 
- 62
+
 		else 
 
- 63
+
 			ledArr[i] = 0; 
 
- 64
+
 	}  
 
- 65
+
 }  
 
- 66
+
 
  
 
- 67
+
 int main(void) {  
 
- 68
+
 	int ch;  
 
- 69
+
 	pc.baud(9600);  
 
- 70
+
 	pc.printf("\r\nHello World!");  
 
- 71
+
 	while(1) {  
 
- 72
+
 		pc.printf("\r\nEnter:");  
 
- 73
+
 		ch = pc.getc();  
 
- 74
+
 		pc.putc(ch);  
 
- 75
+
 		DisplayLed(ch);  
 
- 76
+
 	}  
 
- 77
+
 } 
