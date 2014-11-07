@@ -1,149 +1,43 @@
 BEGIN 
 
- 2
--------------------------------------------------------------------- 
 
- 3
 1. What is the _mask value for LED1?  LED1 is at port 1 pin 18 (bit 18) of LPC1768 
    THe Hex value of mask is: 00040000       
 
- 4
+
    What is the address of FIOSET? 
 
   For FIOSET0 to 4 : 0X2009 C018, 0X2009 C038,0X2009 C058,0X2009 C078, 0X2009 C098
  
 
- 6
 
- 
-
- 7
-
- 
-
- 8
-
- 
-
- 9
-
- 
-
- 10
--------------------------------------------------------------------- 
-
- 11
 2. What is the RS232 Frame? 
 
- 12 It follows Aynchronous serial communication: Start bit, 8 bit data, parrity bit, and Stop bit
+ It follows Aynchronous serial communication: Start bit, 8 bit data, parrity bit, and Stop bit
 
  
 
- 13
-
  
-
- 14
-
- 
-
- 15
-
- 
-
- 16
-
- 
-
- 17
--------------------------------------------------------------------- 
-
- 18
 3. Explain the start and stop conditions of i2c? 
 
  Start is when the Master pulls down (logic low) the SDA line for certain duration of time while SCL is high and stop  is
  when the Master pulls up (logic high) the SDA line for certain durarion of time while SCL is high. 
 
  
-
- 20
-
- 
-
- 21
-
- 
-
- 22
-
- 
-
- 23
-
- 
-
- 24
-
- 
-
- 25
--------------------------------------------------------------------- 
-
- 26
 4. Is the i2c acknowledge SDA LOW or SDA HIGH? 
 
   Acknowledge is SDA low
 
  
-
- 28
-
  
 
- 29
-
- 
-
- 30
-
- 
-
- 31
-
- 
-
- 32
-
- 
-
- 33
--------------------------------------------------------------------- 
-
- 34
 5. Tell me about the DDR3 write leveling Concept in one sentence.   
 
  Dual data rate memory allows faster writing cycle by using both the rising and falling edge of the clock. 
    
 
- 36
 
  
 
- 37
 
- 
-
- 38
-
- 
-
- 39
-
- 
-
- 40
-
- 
-
- 41
 END 
