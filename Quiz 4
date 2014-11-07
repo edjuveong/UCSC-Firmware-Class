@@ -18,7 +18,8 @@ What API (function) do you use to change the baud rate?
 pc.baud () 
  
 Q4: How many bit(s) does TDO have? Is TDO an input or output type? (Ref: JTAG Pins)  
-TDO is the JTAG serial data output
+TDO is the JTAG serial data output.
+There is 1 bit register between TDO (data output) and TDI (data input)
 
 
 Q5: 
