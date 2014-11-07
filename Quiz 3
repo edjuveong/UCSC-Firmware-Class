@@ -4,7 +4,8 @@ BEGIN
 -------------------------------------------------------------------- 
 
  3
-1. What is the _mask value for LED1?  
+1. What is the _mask value for LED1?  LED1 is at port 1 pin 18 (bit 18) of LPC1768 
+   THe Hex value of mask is: 00040000       
 
  4
    What is the address of FIOSET? 
