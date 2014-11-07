@@ -59,8 +59,7 @@ Q5: Reference LPC17xx_UM10360.pdf (Chapter 2)
  30
     What are the GPIO address window? 
 
-     DIP Pins 5 to 30 of the MBED board are the GPI/O
-     Address window: 0X2009C014 for port 0 pin 0 and 0X2009C054 for port 2 pin 0
+    The GPIO addrss window for LPC1768 is from 0X2009 C000 to 0X2009 C09C
 
  
 
