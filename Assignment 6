@@ -60,9 +60,9 @@ typedef struct { int value; } ElemType;
 /* Circular buffer object */
 typedef struct {
     int         size;   /* maximum number of elements           */
-    int         start;  /* index of oldest element              */
-    int         end;    /* index at which to write new element  */
-    ElemType   *elems;  /* vector of elements                   */
+    int         start;  /* index of oldest element  readPointer            */
+    int         end;    /* index at which to write new element writePointer  */
+    keys   *elems;  /* array vector of elements                   */
 } CircularBuffer;
  
 void cbInit(CircularBuffer *cb, int size) {
