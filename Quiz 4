@@ -5,7 +5,7 @@ Q1: Implement the following inline functions:
 
  inline int CircularBufferIsFull(CircularBuffer* que)  
  
- •	If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full.
+ If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full.
  
  int cbIsFull(CircularBuffer *cb) {
     return (cb->end + 1) % cb->size == cb->start;
