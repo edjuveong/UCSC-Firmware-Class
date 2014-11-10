@@ -83,6 +83,15 @@ int cbEnque(CircularBuffer *cb, Q){
  return cb
 
 
+ inline int CircularBufferPrint(CircularBuffer* que)
+{ }
+  while (!cbIsEmpty(&cb)) {
+        cbRead(&cb, &elem);
+        printf("%d\n", elem.value);
+    }
+ 
+ 
+ 
  
 void cbFree(CircularBuffer *cb) {
     free(cb->elems); /* OK if null */
