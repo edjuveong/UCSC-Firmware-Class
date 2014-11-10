@@ -4,8 +4,20 @@ BEGIN
 Q1: Implement the following inline functions:  
 
  inline int CircularBufferIsFull(CircularBuffer* que)  
+ 
+ •	If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full.
+ 
+ int cbIsFull(CircularBuffer *cb) {
+    return (cb->end + 1) % cb->size == cb->start;
+}
+
  inline int CircularBufferIsEmpty(CircularBuffer* que)  
 
+If both pointers refer to the same slot, the buffer is empty.
+
+int cbIsEmpty(CircularBuffer *cb) {
+    return cb->end == cb->start;
+}
 
 Q2: How to compute "Interrupt Latency"? 
 
@@ -25,16 +37,14 @@ There is 1 bit register between TDO (data output) and TDI (data input)
 
 Q5: 
 
+I compiled below program listing and flashed into the MBED board. 
+It worked exactly as expected.
+I also tried using the debug feature in uvision to understand the disassembled program.
 
 What is the address of ledArr[0]?  It is the adress of LED1 (Port 1 pin 18 of LPC1768), *LED1
-
-
 What is the address of ch? *ch  
 
-
 * Enter a hex number [0-9a-fA-F]; Decode it in 4-bit binary format and display them on 4 on board leds.  
-
-
 #include "mbed.h"  
 
 Serial pc(USBTX, USBRX); // tx, rx  
