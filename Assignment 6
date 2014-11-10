@@ -49,28 +49,40 @@ The advantage is:
 
 The disadvantages are:
 •	One slot is lost, so it is a bad compromise when the buffer size is small or the slot is big or is implemented in hardware.
-/* Circular buffer example, keeps one slot open */
+
+inline int CircularBufferIsFull(CircularBuffer* que)   
+
+ If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full. 
+
+ int cbIsFull(CircularBuffer *cb) { 
+
+    return (cb->end + 1) % cb->size == cb->start; 
+ } 
+
  
-#include <stdio.h>
-#include <stdlib.h>
- 
-/* Opaque buffer element type.  This would be defined by the application. */
-typedef struct { int value; } ElemType;
- 
-/* Circular buffer object */
-typedef struct {
-    int         size;   /* maximum number of elements           */
-    int         start;  /* index of oldest element  readPointer            */
-    int         end;    /* index at which to write new element writePointer  */
-    keys   *elems;  /* array vector of elements                   */
-} CircularBuffer;
- 
-void cbInit(CircularBuffer *cb, int size) {
-    cb->size  = size + 1; /* include empty elem */
-    cb->start = 0;
-    cb->end   = 0;
-    cb->elems = calloc(cb->size, sizeof(ElemType));
-}
+inline int CircularBufferIsEmpty(CircularBuffer* que)   
+
+
+If both pointers refer to the same slot, the buffer is empty. 
+
+
+int cbIsEmpty(CircularBuffer *cb) { 
+
+     return cb->end == cb->start; 
+
+ } 
+
+inline int CircularBufferEnque(CircularBuffer* que, KeyType k)
+{ }
+
+int cbEnque(CircularBuffer *cb, Q){
+ Q[end[Q]]=x; 
+ end[Q]=end[Q]+1;
+ if (end[Q]==size{
+ end[Q]=0;}
+ return cb
+
+
  
 void cbFree(CircularBuffer *cb) {
     free(cb->elems); /* OK if null */
