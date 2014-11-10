@@ -9,7 +9,8 @@ Q1: Implement the following inline functions:
 
 Q2: How to compute "Interrupt Latency"? 
 
- Latency is the sum of the time need to save and restore the context prior to the interrupt + time of interrupt service routine
+ Latency is the sum of the time need to save and restore the context prior to the interrupt + time of interrupt service
+ routine + time to disable interrupt + time for OS bookkeeping
  
 Q3: Serial pc(USBTX, USBRX); // tx, rx  
 
