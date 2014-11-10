@@ -21,3 +21,12 @@ the firmware after power cycling once the bin file was downloaded to the board.
 
 We started to study some existing libraries of funtions that the group can use the read the TMP102 valu thriugh the I2C
 communication and to open a csv file, upload the temperature readings, close the csv file as it gets saved into the USB drive.   
+
+Nov. 09- THe project is working properly and project size is 31KB so we can still use u Vision
+
+Nov. 10- We added LCD display to show the value of temperature being stored in USB drive and also changed the power source
+from 4 X AA to 1 X 9VDC battery. We used the textLCD library and was able to make it to work. 
+
+However, project size is now 33KB (exceeds 32KB) so no choice  but to use the online MBED compiler.
+
+Project is properly working with LCD display (16 X 2) and will be used for the class demo.
