@@ -20,7 +20,7 @@ Q5: Reference LPC17xx_UM10360.pdf (Chapter 2)
 
     What are the GPIO address window? 
 
-    The GPIO addrss window for LPC1768 is from 0X2009 C000 to 0X2009 C09C
+    The GPIO addrss window for LPC1768 is from 0X2009 C000 to 0X2009 CFFF
 
  
 
