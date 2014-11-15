@@ -19,15 +19,15 @@ THe bin file opens upp immediately when I am trying to upload this. Apparently, 
 I will need to right click at the selection and save the bin file with if extension to the MBED board. The board did update
 the firmware after power cycling once the bin file was downloaded to the board.
 
-We started to study some existing libraries of funtions that the group can use the read the TMP102 valu thriugh the I2C
+We started to study some existing libraries of functions that the group can use the read the TMP102 valu thriugh the I2C
 communication and to open a csv file, upload the temperature readings, close the csv file as it gets saved into the USB drive.   
 
 Nov. 09- THe project is working properly and project size is 31KB so we can still use u Vision
 I was able to use the logic analyzer to better undrstand the I2C signaing and the USB data transmission.
-Also,I was able to use the debugger functin of uVision particulrly in being able to look at the disassembled file, the
+Also,I was able to use the debugger function of uVision particularly in being able to look at the disassembled file, the
 register contents, stack, and also to do single stepping.
 
-Nov. 10- We added LCD display to show the value of temperature being stored in USB drive and also changed the power source
+We then added LCD display to show the value of temperature being stored in USB drive and also changed the power source
 from 4 X AA to 1 X 9VDC battery. We used the textLCD library and was able to make it to work. 
 
 The system with 9VDC tend to not to last too long with its lower mAhr. capcity as compared to the 4X AA batteries. 
