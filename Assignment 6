@@ -50,57 +50,148 @@ The advantage is:
 The disadvantages are:
 •	One slot is lost, so it is a bad compromise when the buffer size is small or the slot is big or is implemented in hardware.
 
+
+Here are the required library functions for the circular buffer:
+
 inline int CircularBufferIsFull(CircularBuffer* que)   
 
- If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full. 
+If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full. 
 
- int cbIsFull(CircularBuffer *cb) { 
+inline int CircularBufferIsFull(CircularBuffer* que)
+{
+#if IS_BUFFER_SIZE_POWER_OF_TWO
+     return (((que->writePointer + 1) & que->mask) == que->readPointer); 
+#else
+     return (((que->writePointer + 1) % que->size) == que->readPointer); 
+#endif
+}
 
-    return (cb->end + 1) % cb->size == cb->start; 
- } 
-
- 
 inline int CircularBufferIsEmpty(CircularBuffer* que)   
-
 
 If both pointers refer to the same slot, the buffer is empty. 
 
-
-int cbIsEmpty(CircularBuffer *cb) { 
-
-     return cb->end == cb->start; 
-
- } 
+inline int CircularBufferIsEmpty(CircularBuffer* que)
+{
+     return (que->readPointer == que->writePointer); 
+}
 
 
 inline int CircularBufferEnque(CircularBuffer* que, KeyType k)
 { }
 
-int cbEnque(CircularBuffer *cb, Q){
- Q[end[Q]]=x; 
- end[Q]=end[Q]+1;
- if (end[Q]==size{
- end[Q]=0;}
- return cb
+inline int CircularBufferEnque(CircularBuffer* que, KeyType k)
+{
+        int isFull = CircularBufferIsFull(que);
+        if(!isFull) 
+        {
+        que->keys[que->writePointer] = k;
+        que->writePointer++;
+#if IS_BUFFER_SIZE_POWER_OF_TWO
+        que->writePointer &= que->mask;
+#else
+        que->writePointer %= que->size;
+#endif
+        }
+        return isFull;
+}
 
 
 inline int CircularBufferDeque(CircularBuffer* que, KeyType* pK)
 { }
-int cbDeque(CircularBuffer *cb, Q){
- x=Q[start[Q]]; 
- start[Q]=start[Q]+1;
- if (start[Q]==size{
- start[Q]=0;}
- return cb
+
+inline int CircularBufferDeque(CircularBuffer* que, KeyType* pK)
+{
+        int isEmpty =  CircularBufferIsEmpty(que);
+        if(!isEmpty) 
+        {
+        *pK = que->keys[que->readPointer];
+        que->readPointer++;
+#if IS_BUFFER_SIZE_POWER_OF_TWO
+        que->readPointer &= que->mask;
+#else
+        que->readPointer %= que->size;
+#endif
+        }
+        return(isEmpty);
+}
 
 
  inline int CircularBufferPrint(CircularBuffer* que)
 { }
-  while (!cbIsEmpty(&cb)) {
-        *elem = cb->elems[cb->start];
-        cb->start = (cb->start + 1) % cb->size;
-        printf("%d\n", elem.value);
-    }
+
+inline int CircularBufferPrint(CircularBuffer* que)
+{
+        int i=0;
+        int isEmpty =  CircularBufferIsEmpty(que);
+        int isFull  =  CircularBufferIsFull(que);
+        printf("\n==Q: w:%d r:%d f:%d e:%d\n", 
+            que->writePointer, que->readPointer,  isFull, isEmpty);
+        for(i=0; i< que->size; i++)
+        {
+           printf("%d ", que->keys[i]);
+        }
+        printf("\n");
+        return(isEmpty);
+}
+ 
+I then tried the above circular buffer functions and compiled to the MBED board.
+I used below main function:
+int main(int argc, char *argv[])
+{
+        CircularBuffer* que;
+        KeyType a = 101;
+        int isEmpty, i;
+ 
+        CircularBufferInit(&que, BUFFER_SIZE);
+        CircularBufferPrint(que);
+ 
+        for(i=1; i<=3; i++)
+        {  
+            a=10*i;
+            printf("\n\n===\nTest: Insert %d-%d\n", a, a+NUM_OF_ELEMS-1);
+            while(! CircularBufferEnque(que, a++));
+ 
+            //CircularBufferPrint(que);
+            printf("\nRX%d:", i);
+            a=0;
+            isEmpty = CircularBufferDeque(que, &a); 
+            while (!isEmpty)
+            {
+                printf("%02d ", a);
+                a=0;
+                isEmpty = CircularBufferDeque(que, &a); 
+            }
+            //CircularBufferPrint(que);
+        }
+ 
+        free(que);
+        return 0;
+}
+
+Here is the results from the terminal display output:
+
+Serial port COM12 opened
+Init CircularBuffer: keys[8] (12)
+
+==Q: w:0 r:0 f:0 e:1
+32 33 34 35 36 26 30 31 
+
+
+===
+Test: Insert 10-16
+
+RX1:10 11 12 13 14 15 16 
+
+===
+Test: Insert 20-26
+
+RX2:20 21 22 23 24 25 26 
+
+===
+Test: Insert 30-36
+
+RX3:30 31 32 33 34 35 36 
+
  
  
  
