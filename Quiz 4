@@ -7,16 +7,22 @@ Q1: Implement the following inline functions:
  
  If the end (write) pointer refers to the slot preceding the one referred to by the start (read) pointer, the buffer is full.
  
- int cbIsFull(CircularBuffer *cb) {
-    return (cb->end + 1) % cb->size == cb->start;
+inline int CircularBufferIsFull(CircularBuffer* que)
+{
+#if IS_BUFFER_SIZE_POWER_OF_TWO
+     return (((que->writePointer + 1) & que->mask) == que->readPointer); 
+#else
+     return (((que->writePointer + 1) % que->size) == que->readPointer); 
+#endif
 }
 
- inline int CircularBufferIsEmpty(CircularBuffer* que)  
+inline int CircularBufferIsEmpty(CircularBuffer* que)  
 
 If both pointers refer to the same slot, the buffer is empty.
 
-int cbIsEmpty(CircularBuffer *cb) {
-    return cb->end == cb->start;
+inline int CircularBufferIsEmpty(CircularBuffer* que)
+{
+     return (que->readPointer == que->writePointer); 
 }
 
 Q2: How to compute "Interrupt Latency"? 
