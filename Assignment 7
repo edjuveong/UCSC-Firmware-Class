@@ -70,10 +70,24 @@ tmr.delay(0, 500000)
 pio.pin.setlow(led)
 tmr.delay(0, 500000)
 
-I also tried printing “hello world” to display in the tera ware terminal.
 
-I learned that the elua shell is a line interpreter and was able to display hello world, and turn on /off the LEDs in the
-MBED board. 
+I also tried printing “hello world” by using this command:
+eLua# lua -e 'print("Hello, World")' -i
+
+I learned that elua (embedded lua) is a line interpreter and was able to the display hello world, and turn on /off the LEDs
+in the MBED board. 
+
+In trying to understand and familiarize myself to the lua development environment, I learned the following:
+luarocks is a deployment & management system for Lua modules that allows installation of self-contained modules as
+self-contained packages called “rocks”.
+  
+luafilsesystem is a Lua library developed to complement the set of functions related to file systems offered by the 
+standard Lua distribution.
+
+lpack is a lua library module to pack & unpack binary data.
+
+md5 is a basic cryptographic facilities for Lua. It consists of a hash (digest) function, a pair of crypt/decrypt based on MD5, and CFB.
+
 
 
 
