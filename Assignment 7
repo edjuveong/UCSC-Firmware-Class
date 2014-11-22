@@ -59,10 +59,13 @@ Answers:
 
 I did checkout the elua.git
 I concentrated my study on the elua shell. I downloaded the elua.bin and saved this to the MBED board.
-I was then able to try out different commands in elua and also the lua. I used the Tera Term program as the terminal for elua in the windows environment.
+I was then able to try out different commands in elua and also the lua. I used the Tera Term program as the terminal 
+for elua in the windows environment.
+
 Here are the elua commands that I tried:
 help, ver, dir, ls, mkdir, lua,  cp, cat, and exit 
-I also tried the following lua commands into my MBED board to trun on/off the MBED LED1.
+
+I also tried the following lua commands into my MBED board to turn on/off the LED1 of MBED board.
 led = mbed.pio.LED1
 pio.pin.setdir(pio.OUTPUT, led)
 pio.pin.sethigh(led)
@@ -70,14 +73,14 @@ tmr.delay(0, 500000)
 pio.pin.setlow(led)
 tmr.delay(0, 500000)
 
-
-I also tried printing “hello world” by using this command:
+I also tried printing “hello world” to the display terminal by using this command:
 eLua# lua -e 'print("Hello, World")' -i
 
 I learned that elua (embedded lua) is a line interpreter and was able to the display hello world, and turn on /off the LEDs
 in the MBED board. 
 
 In trying to understand and familiarize myself to the lua development environment, I learned the following:
+
 luarocks is a deployment & management system for Lua modules that allows installation of self-contained modules as
 self-contained packages called “rocks”.
   
@@ -86,7 +89,8 @@ standard Lua distribution.
 
 lpack is a lua library module to pack & unpack binary data.
 
-md5 is a basic cryptographic facilities for Lua. It consists of a hash (digest) function, a pair of crypt/decrypt based on MD5, and CFB.
+md5 is a basic cryptographic facilities for Lua. It consists of a hash (digest) function, a pair of crypt/decrypt based
+on MD5, and CFB.
 
 
 
