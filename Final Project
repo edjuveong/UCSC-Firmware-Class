@@ -46,3 +46,39 @@ Here are my learnings:
 3. The logic analyzer has protocol analyzer that helped us to understand the I2C operation and read/write sequence and
   addressing. It also showed USB is much faster serial communication than I2C.
 4. Doing the project really helped us to learn by implementing and applying the knowledge we learned from the class. 
+
+Also, here is the main program list for this project with the 16 X 2 LCD display:
+
+#include "mbed.h"
+#include "TMP102.h"
+#include "MSCFileSystem.h"
+#include "TextLCD.h"
+
+MSCFileSystem fs("fs");
+DigitalOut led(LED1);
+TextLCD lcd(p15, p16, p17, p18, p19, p20); // rs, e, d4-d7
+TMP102 temperature(p9, p10, 0x90);
+
+int main()
+{
+    FILE *fp = fopen("/fs/test.csv","w");
+   
+    float T;
+   
+    for (int i=1; i<151; i++)  {
+      
+        
+        T= temperature.read();
+        lcd.printf("G5 Temperature  %i %0.2f deg.C\n",i,T);
+        fprintf(fp,"%.2f\n",T);
+        led=!led;
+        wait(2.0);
+        
+    }
+
+    fclose(fp);
+    
+    led=0;
+    
+    
+}
