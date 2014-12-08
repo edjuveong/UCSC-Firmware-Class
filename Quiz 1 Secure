@@ -1,34 +1,91 @@
 /*Secure*/
 
-Very similar to fast except that you want to continue comparing two strings until the max. string size is reached
-
+Very similar to fast except that you want to continue comparing two strings until the max. string size is reached.
 This will hide the size of the password and come up always with the same time for string comparison that will be
-independent of the string size
+independent of the string size.
+Even if there is difference just continue with the string comparison to always have the same run time.
 
-Even if there is difference just continue with the string comparison to always have the same run time
+--------------------------------------------------------------------
+Q1: Is there any compile error with the following code (if any)?
+
+	unsigned int Arr[16];
+	3[Arr] = 7; 
+Answer: Yes, because 3 is not allowed as a variable
+--------------------------------------------------------------------
+Q2: What is the difference between the following 3 statements? 
+
+const int * px;  can't change int
+int const * px;  can't change int
+int * const px;  can't change pointer
+
+Is there any compile error for the following cases?
+case1: 
+int x = 13; 
+const int * px; 
+px = & x; 
+
+answer:None
+
+case 2: 
+int x = 13; 
+int const * px; 
+px = & x; 
+
+answer: None
+
+case 3: 
+int x = 13; 
+int * const px; 
+px = & x; 
+
+Answer:Yes, not allowed variable.
+
+--------------------------------------------------------------------
+Q3: Write a function to set or clear ith bit of a 32-bit register. 
+	Where ith (0-based) := {0, 1, 2, …, 31 } 
+
+Answer:
+
+void reg_set(volatile unsigned int * pReg, int ith) 
+{ 
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp |= (0x1 << ith);
+		*&pReg=tmp;
+	}
+} 
+
+void reg_clear(volatile unsigned int * pReg, int ith) 
+{ 
+	volatile unsigned int *tmp = *&pReg;
+	if(ith>-1 && ith<32) {
+		*tmp &= ~(0x1 << ith);
+		*&pReg=tmp;
+	}
+} 
 
 
-#include <stdio.h>
 
-int strcmp (void*s1, void*s2){
-size_t i=0;
-char diff;
-while (1) {
-    diff = ((char*)s2)[1] - ((char*)s1)[i];
-    if (diff !=0) return diff;
-    if ((char*)s1)[i] ==0) return0;
-    i++
-  }
-}
-int main ()
+--------------------------------------------------------------------
+Q4: Write a swap function in C.
 
-{
-  char s0[5] = "STAT";
-  char s1[5] = "STAR";
-  int d;
-  d= strcmp (s0,s1);
-  printf("string difference= %i",d);
-  return 0;
-}
+Answer:
+
+void swap(unsigned int * px, unsigned int *py) { 	
+	unsigned int tmp = *px;
+	*px = *py;
+	*py = tmp;
+} 
+
+--------------------------------------------------------------------
+Q5:	What is the output of the following code? (Given: sizeof(unsigned int) is 4) Page 34 
+
+unsigned int Arr[16]; 
+unsigned int a0 = (unsigned int) &Arr[0]; 
+unsigned int a3 = (unsigned int) &Arr[3]; 
+printf(“%d\n”, a3 – a0); 
+
+Answer:12
+
 
 
