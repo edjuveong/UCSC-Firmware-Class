@@ -47,8 +47,8 @@ I compiled below program listing and flashed into the MBED board.
 It worked exactly as expected.
 I also tried using the debug feature in uvision to understand the disassembled program.
 
-What is the address of ledArr[0]?  It is the adress of LED1 (Port 1 pin 18 of LPC1768), *LED1
-What is the address of ch? *ch  
+What is the address of ledArr[0]?  It is the adress of LED1 (Port 1 pin 18 of LPC1768), *LED1: 0x2009C038
+What is the address of ch? *ch: 0x00 
 
 * Enter a hex number [0-9a-fA-F]; Decode it in 4-bit binary format and display them on 4 on board leds.  
 #include "mbed.h"  
